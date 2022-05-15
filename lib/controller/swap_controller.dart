@@ -11,6 +11,7 @@ class SwapTokenController extends GetxController {
   late String abiCode;
   late DeployedContract contract;
 
+  // TODO : change contract address
   final String swapContractAddress = "0x824724e43F3268a5E4f6c529e724Bc1Ad535044A";
   late EthereumAddress contractAddr;
   late Swap swap;

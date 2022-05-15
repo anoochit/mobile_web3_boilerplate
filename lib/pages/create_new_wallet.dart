@@ -1,4 +1,8 @@
+import 'dart:developer';
+
+import 'package:clipboard/clipboard.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:mobile_web3_boilerplate/controller/wallet_controller.dart';
 import 'package:mobile_web3_boilerplate/widget/wide_button.dart';
@@ -34,11 +38,20 @@ class _CreateNewWalletPageState extends State<CreateNewWalletPage> {
 
                 // action button
 
-                (walletController.wallet.value.isNotEmpty) ? Text(walletController.seed.value) : Container(),
+                (walletController.wallet.value.isNotEmpty)
+                    ? Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Text(walletController.seed.value),
+                      )
+                    : Container(),
                 (walletController.wallet.value.isNotEmpty)
                     ? WideButton(
                         text: "Copy your seed to clipboard, and exit",
-                        onPressed: () {},
+                        onPressed: () {
+                          FlutterClipboard.copy(walletController.seed.value).then((value) {
+                            Get.snackbar("Copied", "Copied seed words to clipboard");
+                          });
+                        },
                       )
                     : Container(),
                 (walletController.wallet.value.isEmpty)

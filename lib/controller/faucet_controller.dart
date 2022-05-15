@@ -13,6 +13,7 @@ class FaucetContractController extends GetxController {
   late DeployedContract contract;
   late ContractFunction withdrawFunction;
 
+  // TODO : change contract address
   final String faucetContractAddress = "0x0e664eaB0463697c4712D062E852E3c6c9c798dd";
   late EthereumAddress contractAddr;
   late Faucet faucet;

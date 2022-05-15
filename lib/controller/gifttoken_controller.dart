@@ -12,6 +12,7 @@ class GiftTokenController extends GetxController {
   late String abiCode;
   late DeployedContract contract;
 
+  // TODO : change contract address
   final String giftContractAddress = "0xE557638C01f783b9124A5F354bC256229f1ea431";
   late EthereumAddress contractAddr;
   late Gift gift;

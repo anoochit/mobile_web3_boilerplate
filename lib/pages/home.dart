@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
 
-            Text(
+            const Text(
               "Boilerplate",
             ),
           ],
