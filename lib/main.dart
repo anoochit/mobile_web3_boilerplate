@@ -6,6 +6,7 @@ import 'package:mobile_web3_boilerplate/pages/create_new_wallet.dart';
 import 'package:mobile_web3_boilerplate/pages/create_wallet.dart';
 import 'package:mobile_web3_boilerplate/pages/home.dart';
 import 'package:mobile_web3_boilerplate/pages/import_wallet.dart';
+import 'package:mobile_web3_boilerplate/pages/transaction.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -55,6 +56,7 @@ class _MyAppState extends State<MyApp> {
         '/create_wallet': (context) => const CreateWalletPage(),
         '/create_new_wallet': (context) => const CreateNewWalletPage(),
         '/import_wallet': (context) => ImportWalletPage(),
+        '/transaction': (context) => Transaction(),
       },
     );
   }
