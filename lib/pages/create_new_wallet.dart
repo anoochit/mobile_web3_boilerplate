@@ -51,6 +51,9 @@ class _CreateNewWalletPageState extends State<CreateNewWalletPage> {
                           FlutterClipboard.copy(walletController.seed.value).then((value) {
                             Get.snackbar("Copied", "Copied seed words to clipboard");
                           });
+
+                          // goto home page
+                          Get.offAllNamed('/home');
                         },
                       )
                     : Container(),
